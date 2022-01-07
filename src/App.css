@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --main-color: rgb(255, 178, 77);
+}
+.app{
+    /* background-color: var(--main-color);
+    color: var(--main-color); */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+#quote-box{
+  background-color: white;
+  width: 450px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.quote-text{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+#text{
+  margin-left: 10px;
+}
+
+.quote-author{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.quote-buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quote-buttons .button {
+  /* background-color: var(--main-color); */
   color: white;
+  border-radius: 5px;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.quote-buttons .button#tumblr-quote{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: larger;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote-buttons .button#new-quote{
+  width: 100px;
+  height: 40px;
 }
